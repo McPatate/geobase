@@ -1,3 +1,5 @@
+mod sorted_string_table;
+
 pub fn hello_geobase(s: &str) -> String {
     let prefix: String = "Prefixed ".to_string();
     prefix + s
