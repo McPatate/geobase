@@ -1,25 +1,25 @@
 pub struct SortedStringTable {
     elements: Vec<String>,
+    
 }
 
 impl SortedStringTable {
-    fn push_copy(&mut self, element: &str) {
-        self.elements.push(element.to_string());
+    fn push(&mut self, element: &str) {
+        let copy = element.to_string();
+        self.elements.push(copy);
     }
 
-    fn push_move(&mut self, element: String) {
-        self.elements.push(element);
-    }
     fn pop(&mut self) -> Option<String> {
         self.elements.pop()
     }
+
     fn find(&self, element: &str) -> Option<String> {
         Some(element.to_string())
     }
 }
 
 #[cfg(test)]
-mod tests {
+mod sst_tests {
     use super::*;
 
     #[test]
