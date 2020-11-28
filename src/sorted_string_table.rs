@@ -1,6 +1,6 @@
 pub struct SortedStringTable {
     elements: Vec<String>,
-    
+
 }
 
 impl SortedStringTable {
@@ -25,7 +25,7 @@ mod sst_tests {
     #[test]
     fn push_pop_element_to_sst() {
         let mut sst = SortedStringTable { elements: vec!["azer".to_string()] };
-        sst.push_copy("Hello !");
+        sst.push("Hello !");
         assert_eq!(sst.pop(), Some("Hello !".to_string()));
     }
 }
